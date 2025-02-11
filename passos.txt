@@ -1,0 +1,19 @@
+configuração da conta local do GIT:
+git config --global user.name AnnaBeatrizSilva2904
+git config --global user.email annabeatryz2504@gmail.com
+
+---------------------------//---------------------------
+
+Criar um projeto AspNet MVC:
+    dotnet new sln --name GStore
+    dotnet new mvc -o GStore
+    dotnet sln add GStore\GStore.csproj
+
+Entrar na pasta CStore:
+    cd GStore
+
+dotnet add package Microsoft.EntityFrameworkCore --version 9.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.1
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.1
+dotnet add package MySql.EntityFrameworkCore --version 9.0.0
