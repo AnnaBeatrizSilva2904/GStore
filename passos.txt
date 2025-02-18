@@ -12,8 +12,9 @@ Criar um projeto AspNet MVC:
 Entrar na pasta CStore:
     cd GStore
 
-dotnet add package Microsoft.EntityFrameworkCore --version 9.0.1
-dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.1
-dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.1
-dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.1
-dotnet add package MySql.EntityFrameworkCore --version 9.0.0
+Instalação dos pacotes: 
+    dotnet add package Microsoft.EntityFrameworkCore --version 9.0.1
+    dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.1
+    dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.1
+    dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.1
+    dotnet add package MySql.EntityFrameworkCore --version 9.0.0
