@@ -18,3 +18,9 @@ Instalação dos pacotes:
     dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.1
     dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.1
     dotnet add package MySql.EntityFrameworkCore --version 9.0.0
+
+Criar o Contexto na pasta Data
+
+Configurar a connectionstring no arquivo appsettings.json
+
+Configurar os serviços de Contexto e Identidade no Program.cs
