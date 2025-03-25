@@ -36,5 +36,4 @@ public class Produto
     public bool Destaque { get; set; } = false;
 
     public List<ProdutoFoto> Fotos { get; set; }
-
 }

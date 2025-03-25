@@ -26,6 +26,16 @@ public class HomeController : Controller
         return View(produtos);
     }
 
+    public IActionResult Produto(int id)
+    {
+        Produto produto = _db.Produtos
+            .Where(p => p.Id == id)
+            .Include(p => p.Categoria)
+            .Include(p => p.Fotos)
+            .SingleOrDefault(); 
+        return View(produto);
+    }
+
     public IActionResult Privacy()
     {
         return View();
