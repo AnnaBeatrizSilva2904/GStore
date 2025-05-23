@@ -49,8 +49,8 @@
     <partial name="_ValidationScriptsPartial.cshtml"></partial>
     <script type="text/javascript">
         let mensagemErro = '';
-        $(".asp-validation-summary-errors ul li").each(function () {
-            mensagemErro +=arguments $(this).text() + '<br />';
+        $(".validation-summary-errors ul li").each(function () {
+            mensagemErro += $(this).text() + '<br />';
         });
         if (mensagemErro != '')
             swal.fire(
