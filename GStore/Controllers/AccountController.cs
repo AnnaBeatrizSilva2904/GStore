@@ -1,3 +1,5 @@
+using System.Net.Mail;
+using System.Security.Claims;
 using GStore.Models;
 using GStore.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -33,5 +35,38 @@ public class AccountController : Controller
             UrlRetorno = returnUrl ?? Url.Content("~/")
         };
         return View(login);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> login(LoginVM login)
+    {
+        if (ModelState.IsValid)
+        {
+            string userName = login.Email;
+            if (IsValidEmail(login.Email))
+            {
+                var user = await _userManager.FindByEmailAsync(login.Email);
+                if (user != null)
+                    userName = user.UserName;
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(
+                userName, login.Senha, login.Lembrar. lockoutOnFailure: true
+            );
+        }
+    }
+
+    public bool IsValidEmail(string email)
+    {
+        try 
+        {
+            MailAddress m =new(email);
+            return true;
+        }
+        catch (FormatException)
+        {
+            return false;
+        }
     }
 }
